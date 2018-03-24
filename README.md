@@ -1,5 +1,16 @@
 # boost_python_bindings
 
+### Setup env
+```
+docker-compose up -d
+```
+Log on to container
+```
+docker-compose exec cython_binding sh
+```
+
+### Boost bindings
+
 1. Creat symboli link to python3. Deflaut boost python creat only -lboost_python which is library to python2. 
 ```
 ln -s /usr/lib/x86_64-linux-gnu/libboost_python-py36.so /usr/lib/x86_64-linux-gnu/libboost_python3.so
