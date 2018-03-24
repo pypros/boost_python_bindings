@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  thiever:
+  boost_python:
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,9 +10,9 @@ services:
         https_proxy: $https_proxy
         boost_version: 1.66.0
         boost_dir: boost_1_66_0
-    container_name: boost
+    container_name: boost_python
     volumes:
     - ./:/boost_python
-    working_dir: /thiever
+    working_dir: /boost_python
     tty: true
 

@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libbz2-dev \
     libboost-all-dev \
-    python-pip && \
+    python-pip \
+    python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -32,4 +33,10 @@ RUN wget https://dl.bintray.com/boostorg/release/${boost_version}/source/${boost
 
 RUN \
     pip install --upgrade pip && \
-    pip install --upgrade setuptools && \
+    pip install --upgrade setuptools
+
+RUN \
+    pip3 install --upgrade pip && \
+    pip3 install --upgrade setuptools
+
+
