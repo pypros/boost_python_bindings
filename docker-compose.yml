@@ -8,8 +8,8 @@ services:
       args:
         http_proxy: $http_proxy
         https_proxy: $https_proxy
-	boost_version: 1.66.0
-	boost_dir: boost_1_66_0
+        boost_version: 1.66.0
+        boost_dir: boost_1_66_0
     container_name: boost
     volumes:
     - ./:/boost_python
