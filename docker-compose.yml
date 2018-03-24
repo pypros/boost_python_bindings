@@ -13,6 +13,6 @@ services:
     container_name: boost
     volumes:
     - ./:/boost_python
-    working_dir: /thiever
+    working_dir: /boost_python
     tty: true
 
