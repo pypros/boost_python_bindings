@@ -33,5 +33,3 @@ RUN wget https://dl.bintray.com/boostorg/release/${boost_version}/source/${boost
 RUN \
     pip install --upgrade pip && \
     pip install --upgrade setuptools && \
-
-CMD bash
