@@ -25,7 +25,10 @@ RUN wget https://dl.bintray.com/boostorg/release/${boost_version}/source/${boost
     cd ${boost_dir} && \
     ./bootstrap.sh && \
     ./b2 --with=all --prefix=/usr -j 4 link=shared runtime-link=shared install && \
-    cd .. && rm -rf ${boost_dir}${boost_version} && ldconfig
+    cd .. && \
+    rm -rf ${boost_dir}${boost_version} && \
+    ldconfig && \
+    ln -s /usr/lib/x86_64-linux-gnu/libboost_python-py36.so /usr/lib/x86_64-linux-gnu/libboost_python3.so
 
 RUN \
     pip install --upgrade pip && \
