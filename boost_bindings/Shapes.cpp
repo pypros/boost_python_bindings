@@ -19,7 +19,7 @@ BOOST_PYTHON_MODULE(shapes)
         .def("move", &Rectangle::move)
     ;
 
-    class_<shapes::Square>("Square", init<>())
+    class_<Square>("Square", init<>())
         .def(init<int, int, int, int>())
         .def_readwrite("x0", &Square::x0)
         .def_readwrite("x1", &Square::x1)
@@ -32,7 +32,3 @@ BOOST_PYTHON_MODULE(shapes)
 
 
 };
-
-//g++ -I/usr/local/include -I/usr/include/python -fpic -c -o hello.o
-//hello.cpp
-//g++ -std=c++11 your_file.cpp -o your_program
